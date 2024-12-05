@@ -116,7 +116,7 @@ def get_video_danmuku(line,current_line,total_lines):
     """
     try:
         bv = line.split(',')[1]
-        title = line.split(',')[2].replace('\n', '').replace('?', '').replace('/','')
+        title = line.split(',')[2].replace('\n', '').replace('?', '').replace('/','').replace('|','')
         print(f'进度: {current_line}-{total_lines}   准备下载视频:{title}弹幕文件  ')
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"

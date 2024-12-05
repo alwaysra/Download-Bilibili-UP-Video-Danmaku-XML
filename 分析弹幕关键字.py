@@ -15,7 +15,7 @@ df = pd.DataFrame(columns=['日期', 'BV号', '标题', '忠诚', '忠诚!', '�
 # 遍历每一行，解析XML文件
 for line in lines:
     date, bv, title = line.strip().split(',')
-    newtitle=title.replace('/','')
+    newtitle=title.replace('/','').replace('|','').replace('?','')
     xml_filename = newtitle + '.xml'
     xml_path = os.path.join('小约翰可汗', xml_filename)
 
